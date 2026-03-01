@@ -1,0 +1,223 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:#f3f4f6;
+  color:#111827;
+}
+
+.app{
+  max-width:430px;
+  margin:auto;
+  background:#ffffff;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* HEADER */
+.header{
+  padding:18px 20px;
+  background:#ffffff;
+  color:#111827;
+  border-bottom:1px solid #e5e7eb;
+}
+
+.header h1{
+  font-size:20px;
+  font-weight:700;
+}
+
+.header p{
+  margin-top:4px;
+  font-size:12px;
+  color:#6b7280;
+}
+
+/* CONTENT */
+.content{
+  padding:18px;
+  flex:1;
+}
+
+/* CARDS */
+.card{
+  background:#ffffff;
+  border-radius:16px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+  border:1px solid #f1f1f1;
+}
+
+.center{
+  text-align:center;
+  padding:40px 20px;
+}
+
+.card h2{
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.muted{
+  font-size:13px;
+  color:#6b7280;
+  margin-bottom:18px;
+}
+
+/* 🔥 FIRST PAGE SPECIAL DESIGN */
+#step1{
+  background:linear-gradient(135deg,#ff6a00,#ff8c42);
+  color:#ffffff;
+  border:none;
+  box-shadow:none;
+}
+
+#step1 h2{
+  color:#ffffff;
+}
+
+#step1 .muted{
+  color:rgba(255,255,255,0.85);
+}
+
+#step1 .google-btn{
+  background:#ffffff;
+  color:#111827;
+  border:none;
+  font-weight:700;
+}
+
+#step1 .google-btn:hover{
+  background:#f3f4f6;
+}
+
+#step1 .note{
+  color:rgba(255,255,255,0.85);
+}
+
+/* GOOGLE BUTTON */
+.google-btn{
+  width:100%;
+  padding:16px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  background:#ffffff;
+  font-weight:600;
+  font-size:15px;
+  cursor:pointer;
+}
+
+/* INPUTS */
+input,select{
+  width:100%;
+  padding:14px;
+  margin-bottom:14px;
+  border-radius:12px;
+  border:1px solid #d1d5db;
+  font-size:14px;
+}
+
+input:focus,select:focus{
+  outline:none;
+  border-color:#ff6a00;
+}
+
+/* BUTTON */
+button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  background:#ff6a00;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* PACKAGES */
+.packages{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:18px;
+}
+
+.pack{
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:14px;
+  cursor:pointer;
+  font-size:14px;
+  background:#ffffff;
+}
+
+.pack span{
+  margin-top:6px;
+  color:#ff6a00;
+  font-weight:700;
+}
+
+.pack.selected{
+  border:2px solid #ff6a00;
+  background:#fff7f0;
+}
+
+/* PAYMENT */
+.bank-box{
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:16px;
+  background:#fafafa;
+}
+
+.bank-box div{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:10px;
+  font-size:14px;
+}
+
+#payAmount{
+  font-weight:700;
+  font-size:18px;
+  color:#ff6a00;
+}
+
+.upload{
+  font-size:13px;
+  color:#6b7280;
+  margin-bottom:16px;
+  display:block;
+}
+
+.note{
+  font-size:12px;
+  color:#6b7280;
+  margin-top:14px;
+}
+
+.success{
+  text-align:center;
+}
+
+.hidden{
+  display:none;
+}
+
+.footer{
+  border-top:1px solid #e5e7eb;
+  padding:14px;
+  text-align:center;
+  font-size:12px;
+  color:#6b7280;
+  background:#ffffff;
+}

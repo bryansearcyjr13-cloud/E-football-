@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CoinTopUp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>CoinTopUp</h1>
+    <p>Fast & Secure Game Top-Up</p>
+  </header>
+
+  <main class="content">
+
+    <!-- STEP 1 : GOOGLE LOGIN ONLY -->
+    <section class="card center" id="step1">
+      <h2>Sign in to continue</h2>
+      <p class="muted">Secure login powered by Google</p>
+
+      <button class="google-btn" onclick="signInWithGoogle()">
+        Sign in with Google
+      </button>
+
+      <p class="note">
+        No passwords • Safe & secure authentication
+      </p>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="card hidden" id="step2">
+      <h2>Account Details</h2>
+      <p class="muted">Confirm your information</p>
+
+      <input type="text" id="username" placeholder="Username">
+      <select id="region">
+        <option value="">Select Region</option>
+        <option>Africa</option>
+        <option>Europe</option>
+        <option>Asia</option>
+        <option>North America</option>
+      </select>
+
+      <button onclick="goPlayer()">Continue</button>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="card hidden" id="step3">
+      <h2>Player ID</h2>
+      <p class="muted">Enter your game Player ID</p>
+
+      <input type="text" id="playerId" placeholder="Player ID">
+      <button onclick="goPackages()">Continue</button>
+    </section>
+
+    <!-- STEP 4 : 20+ PACKAGES -->
+    <section class="card hidden" id="step4">
+      <h2>Select Top-Up Amount</h2>
+      <p class="muted">Choose your preferred coin package</p>
+
+      <div class="packages">
+        <!-- 20 PACKAGES -->
+        <div class="pack" onclick="selectPack(this,100)">100 Coins <span>₦100</span></div>
+        <div class="pack" onclick="selectPack(this,200)">200 Coins <span>₦200</span></div>
+        <div class="pack" onclick="selectPack(this,300)">300 Coins <span>₦300</span></div>
+        <div class="pack" onclick="selectPack(this,400)">400 Coins <span>₦400</span></div>
+        <div class="pack" onclick="selectPack(this,500)">500 Coins <span>₦500</span></div>
+        <div class="pack" onclick="selectPack(this,600)">600 Coins <span>₦600</span></div>
+        <div class="pack" onclick="selectPack(this,700)">700 Coins <span>₦700</span></div>
+        <div class="pack" onclick="selectPack(this,800)">800 Coins <span>₦800</span></div>
+        <div class="pack" onclick="selectPack(this,900)">900 Coins <span>₦900</span></div>
+        <div class="pack" onclick="selectPack(this,1000)">1,000 Coins <span>₦1,000</span></div>
+        <div class="pack" onclick="selectPack(this,1500)">1,500 Coins <span>₦1,500</span></div>
+        <div class="pack" onclick="selectPack(this,2000)">2,000 Coins <span>₦2,000</span></div>
+        <div class="pack" onclick="selectPack(this,2500)">2,500 Coins <span>₦2,500</span></div>
+        <div class="pack" onclick="selectPack(this,3000)">3,000 Coins <span>₦3,000</span></div>
+        <div class="pack" onclick="selectPack(this,3500)">3,500 Coins <span>₦3,500</span></div>
+        <div class="pack" onclick="selectPack(this,4000)">4,000 Coins <span>₦4,000</span></div>
+        <div class="pack" onclick="selectPack(this,4500)">4,500 Coins <span>₦4,500</span></div>
+        <div class="pack" onclick="selectPack(this,5000)">5,000 Coins <span>₦5,000</span></div>
+        <div class="pack" onclick="selectPack(this,7500)">7,500 Coins <span>₦7,500</span></div>
+        <div class="pack" onclick="selectPack(this,10000)">10,000 Coins <span>₦10,000</span></div>
+      </div>
+
+      <button onclick="goPayment()">Proceed to Payment</button>
+    </section>
+
+    <!-- STEP 5 -->
+    <section class="card hidden" id="step5">
+      <h2>Bank Transfer</h2>
+      <p class="muted">Make payment using the details below</p>
+
+      <div class="bank-box">
+        <div><strong>Bank</strong><span>Zenith Bank</span></div>
+        <div><strong>Account Name</strong><span>CoinTopUp Services</span></div>
+        <div><strong>Account Number</strong><span>1234567890</span></div>
+        <div><strong>Amount</strong><span>₦<span id="payAmount"></span></span></div>
+      </div>
+
+      <label class="upload">
+        Upload payment proof
+        <input type="file" id="receipt">
+      </label>
+
+      <button onclick="confirmPayment()">Confirm Payment</button>
+    </section>
+
+    <!-- SUCCESS -->
+    <section class="card hidden success" id="success">
+      <h2>Payment Received</h2>
+      <p>Your top-up is being processed.</p>
+      <p class="muted">Coins will arrive shortly.</p>
+      <button onclick="location.reload()">Finish</button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    🔒 Secure • ⚡ Fast • ✅ Trusted Platform
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
